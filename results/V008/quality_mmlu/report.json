@@ -1,0 +1,1241 @@
+{
+  "config": {
+    "url": "http://127.0.0.1:32000/v1/chat/completions",
+    "model": "qwen38-flash-next",
+    "mmlu_dir": "datasets/mmlu/data/test",
+    "gsm8k": "datasets/gsm8k-test.jsonl",
+    "output": "vllm-runs/V008-fp4local-vllm-nomtp-mem077-conv-bf16-20261113/results/quality_mmlu",
+    "mmlu_per_subject": 1,
+    "gsm_count": 0,
+    "max_mmlu_tokens": 8,
+    "max_gsm_tokens": 160,
+    "timeout": 300.0,
+    "baseline_report": null
+  },
+  "created_at": 1794573114.2264366,
+  "dataset_hashes": {
+    "abstract_algebra_test.csv": "4be89c0fb1d2419722e88880f6da3da95750367185ecd36f6492a6f74785cf64",
+    "anatomy_test.csv": "966dfd5c4579885ebdb8c05d6754ae5834f672632586d8595be3c0f9360e6f4e",
+    "astronomy_test.csv": "87c9c3cb5a55395c70dd9ed521dd7d2629fd4ff236c5ab647102e007f52a9341",
+    "business_ethics_test.csv": "cd3fc3a85a34cb17e6c5b2fb68ea61e7800b31120d92934019f1e17f4832fbd4",
+    "clinical_knowledge_test.csv": "06a1ea973000d5ef5d2664c4ac1c68d0423f1cab6b3b682be7942633740811f1",
+    "college_biology_test.csv": "e1204cb9d19887ea266145f038b5d4cc1fbc33d7efce186259c4ecca1cbe3119",
+    "college_chemistry_test.csv": "4d61d7887f845b887c52ac928b6dffdcf2468d79f3d0fbb4d1731092a51d2552",
+    "college_computer_science_test.csv": "d53a1d0d1c4362dacf92a4ff1d6a755beb5a87f24a7301c3c4391fcacc6530b4",
+    "college_mathematics_test.csv": "8b5bef14d4209c7918eaf947e4f12a5ae9470567722d8ba9761302d733e8ac71",
+    "college_medicine_test.csv": "9c533cfff89edaa317b2e79bbabcdd5e2e522e019679cb4a6475e5f2a1861b1e",
+    "college_physics_test.csv": "079c3696eda22c13b0472de245c7bb4918315b59481964109a4f65d2a35b4243",
+    "computer_security_test.csv": "8e40f809858db9dd8585036b53984e570b6101f72be2214b85e979c7fafa307f",
+    "conceptual_physics_test.csv": "7b39a241bb20424fd2a4e0e37ce05d94865ffc44191d8be4063be0e973312256",
+    "econometrics_test.csv": "10eb6b2d3a519a463872ef75902991b51ebf45865b29888e86d40228ace24029",
+    "electrical_engineering_test.csv": "8b0d747a97cb2cbbd8926c8deb2cda6073da6d5d3cc099693aa7761be938f5e4",
+    "elementary_mathematics_test.csv": "65a46a0e1927ea37aabd031ddcb6d81eef70a7eee1e9e0af94ec8e3fa21d728b",
+    "formal_logic_test.csv": "bc2dc7373a664ae72e166dcbe3f7aaf1bb65b99f106f1831f335c53467f35248",
+    "global_facts_test.csv": "a81058ee8e2385edaf42b8847ec9db01221fa4b16d262db415f3370884745ff9",
+    "high_school_biology_test.csv": "cfaba2b58b9714d2a6983a90bce17f14cc44cfc8195b20f8f65fef70d21331b9",
+    "high_school_chemistry_test.csv": "0e3d94da331d1eb3cafecd64a6f0f64e6fd2410b0a76676b2c0728dc5c1374f5",
+    "high_school_computer_science_test.csv": "63806168fb0e5a72fe5bfb880f19816d8997e28d3f312c6b1831f4d40f432059",
+    "high_school_european_history_test.csv": "09983655452c3c40ba466050ec82252f02a235e5946734f4d73b73688fc9509b",
+    "high_school_geography_test.csv": "c6acdaa9d94c88cdefb9dd569e376733d9ba670c07db12cdff36ccdc18c2ab0c",
+    "high_school_government_and_politics_test.csv": "fbd7a89eb2c7806097e18b40950e44e0580e6f97cd151f01a216bb575c2d7903",
+    "high_school_macroeconomics_test.csv": "354b12cc74d2806c44d1fea42efba04ec12f10233e5169466080a1d1a6f8bba5",
+    "high_school_mathematics_test.csv": "fe8f7a154834bba30947401ba37ea6c7afdcfba82ddc341c79b5d3016991d290",
+    "high_school_microeconomics_test.csv": "a250cc4976654e479cecdb7b66046ce2412df3e5e1b9c3d145ed344eae9a2256",
+    "high_school_physics_test.csv": "573e0f8d8309e4669f53a4b13248a908507b6d5d4c97c977f7bb9814658fee54",
+    "high_school_psychology_test.csv": "88c33b6b0ade567d07b8b5b074effdb52f31d773541fd71e86cb0d85a8daf7bf",
+    "high_school_statistics_test.csv": "d62843d2fd084d6af1c8a0a6491d0aa642c34a7a68476605b9b3db5841e63d3f",
+    "high_school_us_history_test.csv": "0338dea3b11881be53c2208ae8dbb571c792c0dca6f0b36a352147c0be81625e",
+    "high_school_world_history_test.csv": "7787343ae18e4e1ef833c8630c0c914c62f42c2f35d8b90f4bec2eecccfc161e",
+    "human_aging_test.csv": "01299d7e0ae4a8d082daeecc140445ce7393b464040bd810b0a60a370ae5502e",
+    "human_sexuality_test.csv": "43ca779587725f126d07733b33ba339ce27cca6f85056872eccf4b0377e28a90",
+    "international_law_test.csv": "51b3a6d74cc84651b2355d2823c30d993015ddfe8ef39725da4e0442f29489fc",
+    "jurisprudence_test.csv": "bf7a770aebfbdb181abc2c26ffd7a01ab31f93c7e2dfe6924c57c7bca4a0dff6",
+    "logical_fallacies_test.csv": "3fe8b48c74832525556455d49960cc0c3cff37496783348043ff69a1863c2244",
+    "machine_learning_test.csv": "05984b90f887a7da12b3dd8e41e6c34fa856b2c939ea3124975d90910ceb2af0",
+    "management_test.csv": "4a535a11bb480a09a302e86d157ae2d33e054cfa00e4265fe300a9408b87ec6b",
+    "marketing_test.csv": "ecf0ae0ae906194d033ca7d7746eaf201232eccb78ee24147e737473f751233d",
+    "medical_genetics_test.csv": "cc30c698e94f12c00e610a39c62d1a1d9587fa53c005359317346081f722c5e6",
+    "miscellaneous_test.csv": "061b283bb264072321d848b3b7f409a932a11ffa023fc94898dd31d2a4c80c7e",
+    "moral_disputes_test.csv": "673f5e9054f55fc5e165a3ed01e1b13eb1ee5a3405055818b50532e05de9bfdd",
+    "moral_scenarios_test.csv": "128d7bd823d793f8b7faf28f98f4b3c737b3e84d4b42c06c13458d36075a423a",
+    "nutrition_test.csv": "309432be237ac2b659acd10fdd4347d32cdc60aa9daeafbac78486a8744fa0b6",
+    "philosophy_test.csv": "a0f0c6fc9e4f08c04ff3a339996c4ed688a9fbe75d205fff4b9d3549fb49fa1e",
+    "prehistory_test.csv": "8d44938332ea3d199cfa51a18ef69af972aa33ca4af7b5f5bc62e768a31f949a",
+    "professional_accounting_test.csv": "27071efa2f8fd8502d01e80b8d7c69439586019f59e416ce039968417ef41355",
+    "professional_law_test.csv": "eeb81cac576a5f537485b6befd25837b55f64b57e9b2a7e409210d7c8d608820",
+    "professional_medicine_test.csv": "a034bf0dda10cb0848bdd3097eb1547d61ca2dac9e9b871563691621c38d51e9",
+    "professional_psychology_test.csv": "99785591dfe18717736c0c296c9d9840c832f98749060975f7e2d976ad204bf7",
+    "public_relations_test.csv": "3712f955d0c38b073b188a175a8d9a6ce64601f0ae9c98d8cfc37461c4cb5933",
+    "security_studies_test.csv": "ab7634702670ee0d5e98b852f5bcfad2821ff9a2e909d223de05422c948f6638",
+    "sociology_test.csv": "f6c464600032aa2bb53294ad53217fbb650601eee206af947b3ce4c587ff5bed",
+    "us_foreign_policy_test.csv": "2821ee009a2b1b7d4adc5a212a0bad7fe05d377455de0fe0841beab8f00142e1",
+    "virology_test.csv": "4355b9d79142da0e44a767a495a277733fd89ad67236cbbe3f42ff3a6d46b483",
+    "world_religions_test.csv": "3be96b2465419289c4fe0c8a0d003003facd243c8982c6daafc6ac90a40bd507",
+    "gsm8k-test.jsonl": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14"
+  },
+  "by_kind": {
+    "mmlu": {
+      "tasks": 57,
+      "correct": 53,
+      "accuracy": 0.9298245614035088,
+      "parsed": 57,
+      "errors": 0
+    },
+    "gsm8k": {
+      "tasks": 0,
+      "correct": 0,
+      "accuracy": null,
+      "parsed": 0,
+      "errors": 0
+    }
+  },
+  "overall": {
+    "tasks": 57,
+    "correct": 53,
+    "accuracy": 0.9298245614035088,
+    "errors": 0
+  },
+  "rows": [
+    {
+      "kind": "mmlu",
+      "id": "abstract_algebra_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Find the degree for the given field extension Q(sqrt(2), sqrt(3), sqrt(18)) over Q.\nA. 0\nB. 4\nC. 2\nD. 6\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.30703480006195605,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 81,
+        "total_tokens": 83,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "anatomy_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: A lesion causing compression of the facial nerve at the stylomastoid foramen will cause ipsilateral\nA. paralysis of the facial muscles.\nB. paralysis of the facial muscles and loss of taste.\nC. paralysis of the facial muscles, loss of taste and lacrimation.\nD. paralysis of the facial muscles, loss of taste, lacrimation and decreased salivation.\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.30807240307331085,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 114,
+        "total_tokens": 116,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "astronomy_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: What is true for a type-Ia (\"type one-a\") supernova?\nA. This type occurs in binary systems.\nB. This type occurs in young galaxies.\nC. This type produces gamma-ray bursts.\nD. This type produces high amounts of X-rays.\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2985309719806537,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 94,
+        "total_tokens": 96,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "business_ethics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: _______ such as bitcoin are becoming increasingly mainstream and have a whole host of associated ethical implications, for example, they are______ and more ______. However, they have also been used to engage in _______.\nA. Cryptocurrencies, Expensive, Secure, Financial Crime\nB. Traditional currency, Cheap, Unsecure, Charitable giving\nC. Cryptocurrencies, Cheap, Secure, Financial crime\nD. Traditional currency, Expensive, Unsecure, Charitable giving\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.3262400790117681,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 134,
+        "total_tokens": 136,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "clinical_knowledge_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: What size of cannula would you use in a patient who needed a rapid blood transfusion (as of 2020 medical knowledge)?\nA. 18 gauge.\nB. 20 gauge.\nC. 22 gauge.\nD. 24 gauge.\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.3048999810125679,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 97,
+        "total_tokens": 99,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_biology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Based on the characteristic population curves that result from plotting population growth of a species, the most effective means of controlling the mosquito population is to\nA. maintain the population at a point corresponding to the midpoint of its logistic curve\nB. opt for zero population control once the K value of the curve has been reached\nC. reduce the carrying capacity cif the environment to lower the K value\nD. increase the mortality rate\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.32210591097828,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 120,
+        "total_tokens": 122,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_chemistry_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The rate, r, of a zero-order chemical reaction A → B can be expressed as which of the following?\nA. r = k ln[A]\nB. r = k [A]^2\nC. r = k [A]\nD. r = k\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.2793777600163594,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 93,
+        "total_tokens": 95,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_computer_science_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The access matrix approach to protection has the difficulty that\nA. the matrix, if stored directly, is large and can be clumsy to manage\nB. it is not capable of expressing complex protection requirements\nC. deciding whether a process has access to a resource is undecidable\nD. there is no way to express who has rights to change the access matrix itself\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.309617513907142,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 110,
+        "total_tokens": 112,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_mathematics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Let k be the number of real solutions of the equation e^x + x - 2 = 0 in the interval [0, 1], and let n be the number of real solutions that are not in [0, 1]. Which of the following is true?\nA. k = 0 and n = 1\nB. k = 1 and n = 0\nC. k = n = 1\nD. k > 1\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.3173096609534696,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 133,
+        "total_tokens": 135,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_medicine_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: A police officer carries out hundreds of traffic stops every year. When his supervisor is reviewing the officer’s records for the past year, he notices that the officer is equally likely to stop people of various genders, ages, and races. However, he is significantly more likely to write tickets for middle-aged white males with dark hair and eyes. When confronted with this fact, the officer truthfully states that he has no idea why that is, and that it must simply be a coincidence. Unbeknownst to the officer, this behavior is tied to the fact that these men look like his father, with whom he had an abusive relationship as a child. What psychological framework would directly address the unconscious bias in his behavior? \nA. Behaviorist\nB. Psychoanalytic\nC. Cognitive behavioral\nD. Humanistic\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.3704466209746897,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 200,
+        "total_tokens": 202,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "college_physics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The quantum efficiency of a photon detector is 0.1. If 100 photons are sent into the detector, one after the other, the detector will detect photons\nA. an average of 10 times, with an rms deviation of about 4\nB. an average of 10 times, with an rms deviation of about 3\nC. an average of 10 times, with an rms deviation of about 1\nD. an average of 10 times, with an rms deviation of about 0.1\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.32970356405712664,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 149,
+        "total_tokens": 151,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": false
+    },
+    {
+      "kind": "mmlu",
+      "id": "computer_security_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which of the following styles of fuzzer is more likely to explore paths covering every line of code in the following program?\nA. Generational\nB. Blackbox\nC. Whitebox\nD. Mutation-based\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.9143513459712267,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 80,
+        "total_tokens": 82,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "conceptual_physics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: A 10-N force at an angle 45° above the horizontal has a horizontal component of about\nA. 7 N\nB. 5 N\nC. 10 N\nD. 12 N\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2790140670258552,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 84,
+        "total_tokens": 86,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "econometrics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which one of the following is the most appropriate definition of a 99% confidence interval?\nA. 99% of the time in repeated samples, the interval would contain the true value of the parameter\nB. 99% of the time in repeated samples, the interval would contain the estimated value of the parameter\nC. 99% of the time in repeated samples, the null hypothesis will be rejected\nD. 99% of the time in repeated samples, the null hypothesis will not be rejected when it was false\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.33965186204295605,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 148,
+        "total_tokens": 150,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "electrical_engineering_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The Barkhausen criterion for an oscillator\nA. Loop gain should be unity\nB. Loop gain should be less than unity\nC. The phase of a feedback signal with respect to input should be 0° or 360°\nD. Both A and C\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.30193980399053544,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 92,
+        "total_tokens": 94,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "elementary_mathematics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: What is the value of p in 24 = 2p?\nA. p = 4\nB. p = 8\nC. p = 12\nD. p = 24\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.2855622449424118,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 81,
+        "total_tokens": 83,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "formal_logic_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Identify the conclusion of the following argument. It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients. The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes. Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts. (Sigmund Freud, The Origin and Development of Psychoanalysis)\nA. It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.\nB. The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes.\nC. Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.\nD. It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3825671210652217,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 239,
+        "total_tokens": 241,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "global_facts_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: As of 2016, about what percentage of adults aged 18 years or older were overweight?\nA. 10%\nB. 20%\nC. 40%\nD. 80%\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.2861426470335573,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 87,
+        "total_tokens": 89,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_biology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: In a population of giraffes, an environmental change occurs that favors individuals that are tallest. As a result, more of the taller individuals are able to obtain nutrients and survive to pass along their genetic information. This is an example of\nA. directional selection.\nB. stabilizing selection.\nC. sexual selection.\nD. disruptive selection.\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.3143350840546191,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 108,
+        "total_tokens": 110,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_chemistry_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: London dispersion forces are caused by\nA. temporary dipoles created by the position of electrons around the nuclei in a molecule\nB. the three-dimensional intermolecular bonding present in all covalent substances\nC. the uneven electron-to-proton ratio found on individual atoms of a molecule\nD. the electronegativity differences between the different atoms in a molecule\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.3093606560723856,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 111,
+        "total_tokens": 113,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_computer_science_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Let x = 1. What is x << 3 in Python 3?\nA. 1\nB. 3\nC. 8\nD. 16\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.2837928179651499,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 74,
+        "total_tokens": 76,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_european_history_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: This question refers to the following information.\nIn order to make the title of this discourse generally intelligible, I have translated the term \"Protoplasm,\" which is the scientific name of the substance of which I am about to speak, by the words \"the physical basis of life.\" I suppose that, to many, the idea that there is such a thing as a physical basis, or matter, of life may be novel—so widely spread is the conception of life as something which works through matter. … Thus the matter of life, so far as we know it (and we have no right to speculate on any other), breaks up, in consequence of that continual death which is the condition of its manifesting vitality, into carbonic acid, water, and nitrogenous compounds, which certainly possess no properties but those of ordinary matter.\nThomas Henry Huxley, \"The Physical Basis of Life,\" 1868\nFrom the passage, one may infer that Huxley argued that \"life\" was\nA. a force that works through matter\nB. essentially a philosophical notion\nC. merely a property of a certain kind of matter\nD. a supernatural phenomenon\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.3926768930396065,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 276,
+        "total_tokens": 278,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_geography_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The main factor preventing subsistence economies from advancing economically is the lack of\nA. a currency.\nB. a well-connected transportation infrastructure.\nC. government activity.\nD. a banking service.\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.287502684048377,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 78,
+        "total_tokens": 80,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_government_and_politics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which of the following best describes the balance the Supreme Court has struck between the establishment clause and the free-exercise clause?\nA. Freedom of speech is protected except in certain situations, such as yelling \"fire\" in a crowded theater.\nB. Once a church has been recognized by the federal government, its tax-exempt status can never be revoked.\nC. Once Congress has created an administrative agency, that agency can be dissolved only by a constitutional amendment.\nD. State-sponsored prayer during school hours is prohibited, but voluntary prayer by student groups before school is allowed.\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.33984210796188563,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 153,
+        "total_tokens": 155,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_macroeconomics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Suppose that an expansionary fiscal policy leads to a large increase in real output and a small increase in the price level. From this it can be inferred that\nA. inflation had already impacted the economy before the fiscal stimulus.\nB. the economy initially had some unemployed resources.\nC. aggregate supply decreased.\nD. aggregate demand is steeply sloped.\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.30434082297142595,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 110,
+        "total_tokens": 112,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_mathematics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: If a pentagon P with vertices at (– 2, – 4), (– 4, 1), (–1, 4), (2, 4), and (3, 0) is reflected across the line y = x to get a new pentagon, P’, then one of the vertices of P’ is\nA. (0, – 3)\nB. (4, 1)\nC. (2, 2)\nD. (– 4, –2)\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3204740619985387,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 146,
+        "total_tokens": 148,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": false
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_microeconomics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Marginal revenue equals marginal cost at the point where\nA. total revenue is greater than total cost at its greatest distance\nB. total revenue is equal to total cost\nC. marginal product is at its highest point\nD. total product is at its highest point\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.27584032190497965,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 90,
+        "total_tokens": 92,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_physics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The plates of a capacitor are charged to a potential difference of 5 V. If the capacitance is 2 mF, what is the charge on the positive plate?\nA. 0.005 C\nB. 0.01 C\nC. 0.02 C\nD. 0.5 C\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.3049490179400891,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 107,
+        "total_tokens": 109,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_psychology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Nearsightedness results from\nA. too much curvature of the cornea and lens\nB. too little curvature of the cornea and lens\nC. too much curvature of the iris and lens\nD. too little curvature of the iris and lens\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.28049743897281587,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 88,
+        "total_tokens": 90,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_statistics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The weight of an aspirin tablet is 300 milligrams according to the bottle label. An FDA investigator weighs a simple random sample of seven tablets, obtains weights of 299, 300, 305, 302, 299, 301, and 303, and runs a hypothesis test of the manufacturer's claim. Which of the following gives the P-value of this test?\nA. P(t > 1.54) with df = 6\nB. 2P(t > 1.54) with df = 6\nC. P(t > 1.54) with df = 7\nD. 2P(t > 1.54) with df = 7\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.3750399890122935,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 202,
+        "total_tokens": 204,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_us_history_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: This question refers to the following information.\n\"The far-reaching, the boundless future will be the era of American greatness. In its magnificent domain of space and time, the nation of many nations is destined to manifest to mankind the excellence of divine principles; to establish on earth the noblest temple ever dedicated to the worship of the Most High—the Sacred and the True. Its floor shall be a hemisphere—its roof the firmament of the star-studded heavens, and its congregation a Union of many Republics, comprising hundreds of happy millions, calling, owning no man master, but governed by God's natural and moral law of equality, the law of brotherhood—of 'peace and good will amongst men.'\"\nJohn L. O'Sullivan, \"The Great Nation of Futurity,\" 1839\nBy what means did the United States take possession of the Oregon Territory?\nA. The United States was granted the territory in a postwar treaty with France.\nB. The United States bought it from the Native Americans who lived there.\nC. U.S. settlers were the first to arrive in the region; they claimed it for their country.\nD. Great Britain ceded it to the United States as part of a negotiated treaty.\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3965054521104321,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 291,
+        "total_tokens": 293,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "high_school_world_history_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: This question refers to the following information.\nNo task is more urgent than that of preserving peace. Without peace our independence means little. The rehabilitation and upbuilding of our countries will have little meaning. Our revolutions will not be allowed to run their course. What can we do? We can do much! We can inject the voice of reason into world affairs. We can mobilize all the spiritual, all the moral, all the political strength of Asia and Africa on the side of peace. Yes, we! We, the peoples of Asia and Africa, 1.4 billion strong.\nIndonesian leader Sukarno, keynote address to the Bandung Conference, 1955\nThe passage above is most associated with which of the following developments?\nA. The formation of the non-aligned movement\nB. Global disarmanent and nuclear non-proliferation\nC. The Green Revolution in agriculture\nD. Mobilization of pan-Asian ideology\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.3735541480127722,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 230,
+        "total_tokens": 232,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "human_aging_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: The study of older adults and aging is referred to as\nA. Gerontology\nB. Geropsychiatry\nC. Geriatrics\nD. Gero-education\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2784302670042962,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 72,
+        "total_tokens": 74,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "human_sexuality_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which of the following methods of detecting breast cancer involves exposure to radiation?\nA. Needle aspiration\nB. Mammography\nC. Mastectomy\nD. Lumpectomy\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.28398556204047054,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 72,
+        "total_tokens": 74,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "international_law_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which State ordinarily exercises jurisdiction in respect of crimes committed on board vessels?\nA. The coastal State\nB. The flag State\nC. All States enjoy such jurisdiction\nD. The International Tribunal for the Law of the Sea\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.2859071829589084,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 82,
+        "total_tokens": 84,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "jurisprudence_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which statement best explains the purpose of Hart's distinction between 'being obliged' and 'having an obligation'?\nA. It demonstrates the difference between the internal and the external aspect of a rule.\nB. It refutes the natural lawyer' view of the role of morality in law.\nC. It explains the nature of power-conferring rules.\nD. It illuminates the concept of a rule.\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3142448039725423,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 119,
+        "total_tokens": 121,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "logical_fallacies_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: A valid disjunctive syllogism has a major premise that:\nA. includes two or more alternatives\nB. classifies subjects\nC. affirms the antecedent or denies the consequent\nD. leads to a valid conclusion\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2929744489956647,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 86,
+        "total_tokens": 88,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "machine_learning_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Statement 1| Linear regression estimator has the smallest variance among all unbiased estimators. Statement 2| The coefficients α assigned to the classifiers assembled by AdaBoost are always non-negative.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.2955074160126969,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 97,
+        "total_tokens": 99,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "management_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: What is the term for a sub-optimal but acceptable outcome of negotiations between parties?\nA. Bargaining\nB. Satisficing\nC. Accepting\nD. Compromising\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.27564051898662,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 75,
+        "total_tokens": 77,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "marketing_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: This is a hierarchy of effects or sequential model used to explain how advertising works:\nA. ADD.\nB. AIDA.\nC. PESTLE.\nD. SWOT.\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.27618159202393144,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 76,
+        "total_tokens": 78,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "medical_genetics_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: In a Robertsonian translocation fusion occurs at the:\nA. telomeres.\nB. centromeres.\nC. histones.\nD. ends of the long arms.\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.26925336802378297,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 76,
+        "total_tokens": 78,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "miscellaneous_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: An important source of information on the credit rating of retail businesses is\nA. the Retail Merchants Association\nB. the local chamber of commerce\nC. Dun & Bradstreet, Inc.\nD. the United States Retail Credit Association\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.27315737900789827,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 84,
+        "total_tokens": 86,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "moral_disputes_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion:  Just war theory's principle of military necessity belongs to\nA. jus in bello.\nB. jus ad bellum.\nC. moral nihilism.\nD. all of the above\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2864813630003482,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 76,
+        "total_tokens": 78,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "moral_scenarios_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I slammed on my breaks to miss the ball as it came in to the road. Scenario 2 | I taught my children to play the xylophone.\nA. Wrong, Wrong\nB. Wrong, Not wrong\nC. Not wrong, Wrong\nD. Not wrong, Not wrong\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3385925489710644,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 139,
+        "total_tokens": 141,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "nutrition_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which foods tend to be consumed in lower quantities in Wales and Scotland (as of 2020)?\n\nA. Meat\nB. Confectionary\nC. Fruits and vegetables\nD. Potatoes\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.287560087046586,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 80,
+        "total_tokens": 82,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "philosophy_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Aesthetics deals with objects that are_____.\nA. essential to our existence\nB. unimportant to most people\nC. not essential to our existence\nD. rarely viewed\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.2748211760772392,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 74,
+        "total_tokens": 76,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "prehistory_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Unlike most other early civilizations, Minoan culture shows little evidence of:\nA. trade.\nB. warfare.\nC. the development of a common religion.\nD. conspicuous consumption by elites.\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.28871173795778304,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 79,
+        "total_tokens": 81,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": false
+    },
+    {
+      "kind": "mmlu",
+      "id": "professional_accounting_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: You bought a limousine for $98,000 and are planning to rent it for weddings, ceremonies and parties at $245 per hour. If you estimate the car will be hired for 2 hours a day on average, with daily costs at about $50, what is the estimated yearly yield on your investment if you work all year round, i.e. every day of the year, including any festivities and weekends?\nA. 164%\nB. 1.64%\nC. 0.45%\nD. 183%\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.3388321519596502,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 161,
+        "total_tokens": 163,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "professional_law_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: One afternoon, a pilot was flying a small airplane when it suddenly ran out of gas. As he was coming in for an emergency landing, the plane crossed into a neighboring state at a very low altitude. At this time, a 9-year-old boy was walking to school when he was struck and injured by an object, which may have fallen from the plane. In federal court, a negligence suit was brought against the pilot by the father of the boy for his son. Accompanied by his father, the boy had visited an attorney for preliminary discussions regarding the case. However, the father did not retain the attorney to represent his son in the lawsuit. Instead, the father hired another lawyer to handle the case. At trial, the pilot's attorney calls the consulting attorney to testify what the boy had said to him regarding his physical condition during the consultation that the attorney had had with the boy and his father. The attorney's testimony is\nA. admissible, because the attorney-client privilege was waived by the filing of the lawsuit.\nB. admissible, because there is no privilege of confidentiality when a person other than the client is present at the attorney-client consultation.\nC. inadmissible, because the attorney-client privilege prevents such a breach of confidential communications.\nD. inadmissible, because it was a statement of physical condition not made for the purpose of obtaining medical treatment.\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.3985966199543327,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 314,
+        "total_tokens": 316,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "professional_medicine_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: A 67-year-old woman comes to the physician for a follow-up examination. She had a pulmonary embolism and required treatment in the hospital for 3 weeks. She had a retroperitoneal hemorrhage; anticoagulant therapy was temporarily discontinued, and she underwent placement of an inferior vena cava (IVC) filter. She had a hematoma that was resolving on discharge from the hospital 2 weeks ago. Today, she says she has had a persistent sensation of tingling and numbness of her left thigh that she did not report in the hospital because she thought it would go away; the sensation has improved somewhat during the past week. Her only medication is warfarin. Vital signs are within normal limits. Examination of the skin shows no abnormalities. Muscle strength is normal. Sensation to light touch is decreased over a 5 x 5-cm area on the lateral aspect of the left anterior thigh. Which of the following is the most likely cause of this patient's decreased sensation?\nA. Cerebral infarction during the hospitalization\nB. Complication of the IVC filter placement\nC. Compression of the lateral femoral cutaneous nerve\nD. Hematoma of the left thigh\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.40749555407091975,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 287,
+        "total_tokens": 289,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "professional_psychology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which of the following statements expresses a relationship between aging and sexual functioning\nA. Aging is related to an increase in vaginal lubrication\nB. Aging is associated with an increase in the frequency and number of orgasmic contractions in both sexes\nC. There is no significant relationship between aging and sexual responses in either sex\nD. Aging is related to some loss of erectile rigidity in the male\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.3114500859519467,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 116,
+        "total_tokens": 118,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "public_relations_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which common public relations tactic involves sending journalists on visits to appropriate locations?\nA. Media release\nB. Media tour\nC. Press room\nD. Promotional days/weeks\nAnswer:",
+      "expected": "B",
+      "elapsed_s": 0.2881455960450694,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 73,
+        "total_tokens": 75,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "B",
+      "parsed": "B",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "security_studies_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Which of these principles is not an element of the responsibility to protect?\nA. The responsibility to prevent.\nB. The responsibility to react.\nC. The responsibility to remain sovereign.\nD. The responsibility to rebuild.\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.29147798800840974,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 83,
+        "total_tokens": 85,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "sociology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: Mass-society theory suggests that:\nA. the content of the media is determined by market forces\nB. the subordinate classes are dominated by the ideology of the ruling class\nC. the media manipulate 'the masses' as vulnerable, passive consumers\nD. audiences make selective interpretations of media messages\nAnswer:",
+      "expected": "C",
+      "elapsed_s": 0.30263782502152026,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 96,
+        "total_tokens": 98,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "us_foreign_policy_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: What is the structure of the United Nations Security Council?\nA. 5 permanent members with veto power, 10 rotating members with no veto power\nB. 5 permanent members and 10 rotating members, all with veto power\nC. 10 permanent members with veto power, and 5 rotating members without veto power\nD. 15 permanent members with veto power\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.30638217099476606,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 116,
+        "total_tokens": 118,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "A",
+      "parsed": "A",
+      "correct": true
+    },
+    {
+      "kind": "mmlu",
+      "id": "virology_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion: How many human polyomaviruses are known at present?\nA. 100\nB. 1\nC. 10\nD. unknown\nAnswer:",
+      "expected": "A",
+      "elapsed_s": 0.2760640629567206,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 71,
+        "total_tokens": 73,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "C",
+      "parsed": "C",
+      "correct": false
+    },
+    {
+      "kind": "mmlu",
+      "id": "world_religions_test:0",
+      "prompt": "Answer the multiple-choice question with only the letter A, B, C, or D.\nQuestion:  What can murtis be translated as?\nA. Offerings\nB. Prayers\nC. Apparitions\nD. Idols\nAnswer:",
+      "expected": "D",
+      "elapsed_s": 0.28412243607454,
+      "error": null,
+      "usage": {
+        "prompt_tokens": 66,
+        "total_tokens": 68,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output_text": "D",
+      "parsed": "D",
+      "correct": true
+    }
+  ],
+  "baseline_comparison": null
+}

@@ -1,0 +1,249 @@
+{
+  "rounds": [
+    {
+      "run": "R020-bf16kv-gpuonly-cold-r1-20261112",
+      "kv_dtype": "auto",
+      "pool_tokens": 131072,
+      "kvcache": 3.095,
+      "summary": {
+        "requests": 20,
+        "successful_requests": 20,
+        "all_correct": true,
+        "all_expected_output_lengths": true,
+        "all_cold": true,
+        "ttft_s": {
+          "median": 5.614651529002003,
+          "min": 4.7681548449909315,
+          "max": 6.465036778012291
+        },
+        "tpot_s": {
+          "median": 0.05628155678209355,
+          "min": 0.052765139047166,
+          "max": 0.0598409432392823
+        },
+        "output_time_s": {
+          "median": 14.351796979433857,
+          "min": 13.455110457027331,
+          "max": 15.259440526016988
+        },
+        "single_decode_tok_s": {
+          "median": 17.818483310897573,
+          "min": 16.710966536763323,
+          "max": 18.951906847172605
+        },
+        "single_e2e_tok_s": {
+          "median": 12.832803108226367,
+          "min": 12.776044340017442,
+          "max": 12.867404887189148
+        },
+        "instance_output_tok_s": 25.66022049059164,
+        "instance_req_s": 0.1002352362913736,
+        "pair_wall_s": {
+          "median": 19.949795246124268,
+          "min": 19.898385763168335,
+          "max": 20.038115978240967
+        },
+        "prompt_tokens": [
+          8158,
+          8159,
+          8160,
+          8161,
+          8162,
+          8163
+        ],
+        "completion_tokens": 5120,
+        "cached_tokens": 0,
+        "wall_s": 199.5306315422058,
+        "passed": true
+      },
+      "quality_overall": {
+        "tasks": 20,
+        "correct": 20,
+        "errors": 0
+      },
+      "quality_same_outputs": null,
+      "min_mem_available_gib": 27.616031646728516,
+      "max_swap_growth_mib": 6.35546875
+    },
+    {
+      "run": "R021-bf16kv-gpuonly-cold-r2-20261112",
+      "kv_dtype": "auto",
+      "pool_tokens": 131072,
+      "kvcache": 3.095,
+      "summary": {
+        "requests": 20,
+        "successful_requests": 20,
+        "all_correct": true,
+        "all_expected_output_lengths": true,
+        "all_cold": true,
+        "ttft_s": {
+          "median": 5.694981903536245,
+          "min": 4.83257238205988,
+          "max": 6.713646146003157
+        },
+        "tpot_s": {
+          "median": 0.05539203398409026,
+          "min": 0.05194910080035162,
+          "max": 0.05926778237609302
+        },
+        "output_time_s": {
+          "median": 14.124968665943015,
+          "min": 13.247020704089664,
+          "max": 15.11328450590372
+        },
+        "single_decode_tok_s": {
+          "median": 18.113893507053838,
+          "min": 16.872573258340307,
+          "max": 19.249611342516854
+        },
+        "single_e2e_tok_s": {
+          "median": 12.901867309028791,
+          "min": 12.820668881108677,
+          "max": 12.94525554476401
+        },
+        "instance_output_tok_s": 25.794231305118263,
+        "instance_req_s": 0.10075871603561821,
+        "pair_wall_s": {
+          "median": 19.843329429626465,
+          "min": 19.776901721954346,
+          "max": 19.969857215881348
+        },
+        "prompt_tokens": [
+          8158,
+          8159,
+          8160,
+          8161,
+          8162,
+          8163
+        ],
+        "completion_tokens": 5120,
+        "cached_tokens": 0,
+        "wall_s": 198.49399423599243,
+        "passed": true
+      },
+      "quality_overall": {
+        "tasks": 20,
+        "correct": 20,
+        "errors": 0
+      },
+      "quality_same_outputs": null,
+      "min_mem_available_gib": 27.183494567871094,
+      "max_swap_growth_mib": 6.5859375
+    },
+    {
+      "run": "R022-bf16kv-gpuonly-cold-r3-20261112",
+      "kv_dtype": "auto",
+      "pool_tokens": 131072,
+      "kvcache": 3.095,
+      "summary": {
+        "requests": 20,
+        "successful_requests": 20,
+        "all_correct": true,
+        "all_expected_output_lengths": true,
+        "all_cold": true,
+        "ttft_s": {
+          "median": 5.605724374996498,
+          "min": 4.761747205979191,
+          "max": 6.582173955044709
+        },
+        "tpot_s": {
+          "median": 0.0577084469138736,
+          "min": 0.05272975559209419,
+          "max": 0.06270735310984081
+        },
+        "output_time_s": {
+          "median": 14.715653963037767,
+          "min": 13.446087675984018,
+          "max": 15.990375043009408
+        },
+        "single_decode_tok_s": {
+          "median": 17.340444692086713,
+          "min": 15.947093130344035,
+          "max": 18.964624219686897
+        },
+        "single_e2e_tok_s": {
+          "median": 12.841836205616541,
+          "min": 12.322150896808749,
+          "max": 12.883230098263205
+        },
+        "instance_output_tok_s": 25.562749624754726,
+        "instance_req_s": 0.09985449072169815,
+        "pair_wall_s": {
+          "median": 19.93570840358734,
+          "min": 19.872238159179688,
+          "max": 20.776569843292236
+        },
+        "prompt_tokens": [
+          8158,
+          8159,
+          8160,
+          8161,
+          8162,
+          8163
+        ],
+        "completion_tokens": 5120,
+        "cached_tokens": 0,
+        "wall_s": 200.29144263267517,
+        "passed": true
+      },
+      "quality_overall": {
+        "tasks": 20,
+        "correct": 20,
+        "errors": 0
+      },
+      "quality_same_outputs": null,
+      "min_mem_available_gib": 26.924808502197266,
+      "max_swap_growth_mib": 7.74609375
+    }
+  ],
+  "requests": 60,
+  "all_correct": true,
+  "all_cold": true,
+  "ttft_s": {
+    "median": 5.644688260508701,
+    "min": 4.761747205979191,
+    "max": 6.713646146003157
+  },
+  "tpot_s": {
+    "median": 0.05739649849208803,
+    "min": 0.05194910080035162,
+    "max": 0.06270735310984081
+  },
+  "output_time_s": {
+    "median": 14.636107115482446,
+    "min": 13.247020704089664,
+    "max": 15.990375043009408
+  },
+  "single_decode_tok_s": {
+    "median": 17.43032974396075,
+    "min": 15.947093130344035,
+    "max": 19.249611342516854
+  },
+  "single_e2e_tok_s": {
+    "median": 12.848619197977083,
+    "min": 12.322150896808749,
+    "max": 12.94525554476401
+  },
+  "instance_output_tok_s": {
+    "median": 25.66022049059164,
+    "min": 25.562749624754726,
+    "max": 25.794231305118263
+  },
+  "instance_req_s": {
+    "median": 0.1002352362913736,
+    "min": 0.09985449072169815,
+    "max": 0.10075871603561821
+  },
+  "min_mem_available_gib": {
+    "median": 27.183494567871094,
+    "min": 26.924808502197266,
+    "max": 27.616031646728516
+  },
+  "max_swap_growth_mib": {
+    "median": 6.5859375,
+    "min": 6.35546875,
+    "max": 7.74609375
+  },
+  "quality_correct": 60,
+  "quality_tasks": 60
+}
