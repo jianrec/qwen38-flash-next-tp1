@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "gates": {
+    "all_requests_successful": true,
+    "all_answers_correct": true,
+    "cold_hot_replay_outputs_exact": true,
+    "uma_headroom_at_least_16_gib": true,
+    "swap_growth_at_most_1_gib": true,
+    "flush_cache_succeeded": null,
+    "storage_hit_required_and_observed": true,
+    "all_replays_meet_storage_coverage": false,
+    "all_replay_answers_exact": true,
+    "full_replay_cache_required_and_observed": true,
+    "host_hit_required_and_observed": null
+  }
+}

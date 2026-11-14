@@ -1,0 +1,97 @@
+{
+  "repeat": 1,
+  "tag": "E090-hot-r1",
+  "url": "http://127.0.0.1:31000/v1/chat/completions",
+  "concurrency": 2,
+  "warmup": {
+    "started_at": 1794651006.038001,
+    "elapsed_s": 4.489035925999815,
+    "ttft_s": 3.569923388999996,
+    "tpot_s": 0.06127416913332127,
+    "output_tok_per_s": 3.5642396861496315,
+    "prompt_tokens": 5725,
+    "completion_tokens": 16,
+    "cached_tokens": 0,
+    "cached_tokens_details": {},
+    "output_text": "CODE-0000-E-5EC4841E",
+    "output_sha256": "05d06607a071a5692ebb1ebb6a4a8df82f270f4957896e7267c2a00f563ce185",
+    "finish_reasons": [
+      "stop"
+    ],
+    "stream_events": 18,
+    "error": null
+  },
+  "rows": [
+    {
+      "started_at": 1794651010.5275993,
+      "elapsed_s": 1.7154370680000284,
+      "ttft_s": 0.6684501199997612,
+      "tpot_s": 0.06979912986668448,
+      "output_tok_per_s": 9.32706905923041,
+      "prompt_tokens": 5725,
+      "completion_tokens": 16,
+      "cached_tokens": 5696,
+      "cached_tokens_details": {
+        "device": 5696,
+        "host": 0,
+        "storage": 0,
+        "storage_backend": "HiCacheFile"
+      },
+      "output_text": "CODE-0000-E-5EC4841E",
+      "output_sha256": "05d06607a071a5692ebb1ebb6a4a8df82f270f4957896e7267c2a00f563ce185",
+      "finish_reasons": [
+        "stop"
+      ],
+      "stream_events": 19,
+      "error": null,
+      "expected_code": "CODE-0000-E-5EC4841E",
+      "answer_correct": true
+    },
+    {
+      "started_at": 1794651010.5280247,
+      "elapsed_s": 1.7147292160007055,
+      "ttft_s": 0.6678204270001515,
+      "tpot_s": 0.0697939192667036,
+      "output_tok_per_s": 9.330919337408325,
+      "prompt_tokens": 5725,
+      "completion_tokens": 16,
+      "cached_tokens": 5696,
+      "cached_tokens_details": {
+        "device": 5696,
+        "host": 0,
+        "storage": 0,
+        "storage_backend": "HiCacheFile"
+      },
+      "output_text": "CODE-0000-E-5EC4841E",
+      "output_sha256": "05d06607a071a5692ebb1ebb6a4a8df82f270f4957896e7267c2a00f563ce185",
+      "finish_reasons": [
+        "stop"
+      ],
+      "stream_events": 19,
+      "error": null,
+      "expected_code": "CODE-0000-E-5EC4841E",
+      "answer_correct": true
+    }
+  ],
+  "all_correct": true,
+  "wall_s": 1.71630946499954,
+  "requests": 2,
+  "successful": 2,
+  "ttft_mean_s": 0.6681352734999564,
+  "ttft_p95_s": 0.6684501199997612,
+  "tpot_mean_s": 0.06979652456669404,
+  "wallclock_req_s": 1.165291015860322,
+  "wallclock_output_tok_s": 18.644656253765152,
+  "slo_threshold": {
+    "ttft_s": 5.0,
+    "tpot_s": 0.1
+  },
+  "slo_goodput_req_s": 1.165291015860322,
+  "slo_goodput_requests": 2,
+  "cache_tier_tokens": {
+    "device": 11392,
+    "host": 0,
+    "storage": 0
+  },
+  "created_at": 1794651012.2434793
+}

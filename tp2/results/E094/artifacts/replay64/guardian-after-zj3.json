@@ -1,0 +1,93 @@
+{
+  "timestamp": 1794654067.3310723,
+  "memory": {
+    "total_bytes": 130660974592,
+    "available_bytes": 55704748032,
+    "free_bytes": 10531774464,
+    "buffers_bytes": 348737536,
+    "cached_bytes": 54019477504,
+    "swap_total_bytes": 17179865088,
+    "swap_used_bytes": 954658816
+  },
+  "memory_pressure": {
+    "some_avg10": 0.0,
+    "full_avg10": 0.0
+  },
+  "swap": {
+    "pswpin": 171427,
+    "pswpout": 310276,
+    "page_size_bytes": 4096
+  },
+  "load1": 1.14,
+  "cpu_utilization_ratio": 0.02780586450960565,
+  "disk_total_bytes": 4031871553536,
+  "disk_available_bytes": 1752423972864,
+  "network": {
+    "enP7s7": {
+      "rx_bytes": 14234,
+      "tx_bytes": 36871
+    },
+    "enp1s0f0np0": {
+      "rx_bytes": 4435525,
+      "tx_bytes": 5524791
+    },
+    "enp1s0f1np1": {
+      "rx_bytes": 25166793964687,
+      "tx_bytes": 25185116671446
+    },
+    "enP2p1s0f0np0": {
+      "rx_bytes": 2289885,
+      "tx_bytes": 232026
+    },
+    "enP2p1s0f1np1": {
+      "rx_bytes": 3354545,
+      "tx_bytes": 167554
+    },
+    "wlP9s9": {
+      "rx_bytes": 47663152330,
+      "tx_bytes": 30272631856
+    },
+    "tailscale0": {
+      "rx_bytes": 8931,
+      "tx_bytes": 1005806
+    }
+  },
+  "gpu": {
+    "utilization_ratio": 0.96,
+    "temperature_celsius": 53.0,
+    "power_watts": 18.36
+  },
+  "target": {
+    "name": "E094-tp2-r054-local-file-maxreq3-kernel-20261114-r1",
+    "id": "b1b4fd2779a193ac4ffb3a3cecc22e69642e6ce7397167caf65ae9c24ae99cda",
+    "running": true,
+    "pid": 2164959,
+    "memory_bytes": 40559013888,
+    "memory_peak_bytes": 57149214720,
+    "swap_bytes": 0,
+    "memory_limit_bytes": 107374182400,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    }
+  },
+  "armed": true,
+  "run_id": "E094-tp2-r054-local-file-maxreq3-kernel-20261114",
+  "config": "A",
+  "group": "G23",
+  "dry_run": false,
+  "last_trigger": {
+    "run_id": "E028-fp8kv-local-hicache-ssd-settle-20261110",
+    "reason": "peer_triggered:container_limit_near",
+    "timestamp": 1794314123.5475802,
+    "dry_run": false,
+    "stopped": true
+  },
+  "guard_version": 2,
+  "agent_pid": 278363
+}

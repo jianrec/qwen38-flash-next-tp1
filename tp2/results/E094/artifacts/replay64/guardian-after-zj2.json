@@ -1,0 +1,87 @@
+{
+  "timestamp": 1794654067.521676,
+  "memory": {
+    "total_bytes": 130661203968,
+    "available_bytes": 55718129664,
+    "free_bytes": 12523032576,
+    "buffers_bytes": 257998848,
+    "cached_bytes": 52129124352,
+    "swap_total_bytes": 17179865088,
+    "swap_used_bytes": 32768
+  },
+  "memory_pressure": {
+    "some_avg10": 0.0,
+    "full_avg10": 0.0
+  },
+  "swap": {
+    "pswpin": 0,
+    "pswpout": 48,
+    "page_size_bytes": 4096
+  },
+  "load1": 1.11,
+  "cpu_utilization_ratio": 0.018099547511312264,
+  "disk_total_bytes": 4031871553536,
+  "disk_available_bytes": 1177439150080,
+  "network": {
+    "enP7s7": {
+      "rx_bytes": 0,
+      "tx_bytes": 0
+    },
+    "enp1s0f0np0": {
+      "rx_bytes": 1380742555185,
+      "tx_bytes": 1380778705773
+    },
+    "enp1s0f1np1": {
+      "rx_bytes": 62606,
+      "tx_bytes": 79787
+    },
+    "enP2p1s0f0np0": {
+      "rx_bytes": 60498,
+      "tx_bytes": 8003
+    },
+    "enP2p1s0f1np1": {
+      "rx_bytes": 37837,
+      "tx_bytes": 7848
+    },
+    "wlP9s9": {
+      "rx_bytes": 11831335,
+      "tx_bytes": 10129106
+    },
+    "tailscale0": {
+      "rx_bytes": 148796,
+      "tx_bytes": 364890
+    }
+  },
+  "gpu": {
+    "utilization_ratio": 0.96,
+    "temperature_celsius": 57.0,
+    "power_watts": 22.05
+  },
+  "target": {
+    "name": "E094-tp2-r054-local-file-maxreq3-kernel-20261114-r0",
+    "id": "6ea3430c6f302499510b8b8d85d7f991193d07c1864a1c1c6116d7c4fd40988a",
+    "running": true,
+    "pid": 142319,
+    "memory_bytes": 57210494976,
+    "memory_peak_bytes": 76010377216,
+    "swap_bytes": 0,
+    "memory_limit_bytes": 107374182400,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    }
+  },
+  "armed": true,
+  "run_id": "E094-tp2-r054-local-file-maxreq3-kernel-20261114",
+  "config": "A",
+  "group": "G23",
+  "dry_run": false,
+  "last_trigger": null,
+  "guard_version": 2,
+  "agent_pid": 18033
+}

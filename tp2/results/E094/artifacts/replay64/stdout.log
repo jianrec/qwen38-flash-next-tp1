@@ -1,0 +1,205 @@
+{"phase": "target_cold", "doc": 0, "position": "end", "correct": true, "ttft_s": 4.78, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 1, "position": "end", "correct": true, "ttft_s": 3.568, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 2, "position": "end", "correct": true, "ttft_s": 3.709, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 3, "position": "end", "correct": true, "ttft_s": 3.608, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 4, "position": "end", "correct": true, "ttft_s": 3.644, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 5, "position": "end", "correct": true, "ttft_s": 3.626, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 6, "position": "end", "correct": true, "ttft_s": 3.615, "cache": {}, "error": null}
+{"phase": "target_cold", "doc": 7, "position": "end", "correct": true, "ttft_s": 3.616, "cache": {}, "error": null}
+{"phase": "target_hot", "doc": 0, "position": "end", "correct": true, "ttft_s": 0.438, "cache": {"device": 5696, "host": 0, "storage": 0, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "pressure_unique", "doc": 8, "position": "end", "correct": true, "ttft_s": 7.299, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 9, "position": "end", "correct": true, "ttft_s": 3.631, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 10, "position": "end", "correct": true, "ttft_s": 3.629, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 11, "position": "end", "correct": true, "ttft_s": 3.662, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 12, "position": "end", "correct": true, "ttft_s": 3.66, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 13, "position": "end", "correct": true, "ttft_s": 3.652, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 14, "position": "end", "correct": true, "ttft_s": 3.629, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 15, "position": "end", "correct": true, "ttft_s": 3.603, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 16, "position": "end", "correct": true, "ttft_s": 3.582, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 17, "position": "end", "correct": true, "ttft_s": 3.596, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 18, "position": "end", "correct": true, "ttft_s": 3.618, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 19, "position": "end", "correct": true, "ttft_s": 3.65, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 20, "position": "end", "correct": true, "ttft_s": 3.702, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 21, "position": "end", "correct": true, "ttft_s": 3.685, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 22, "position": "end", "correct": true, "ttft_s": 3.673, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 23, "position": "end", "correct": true, "ttft_s": 3.652, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 24, "position": "end", "correct": true, "ttft_s": 3.578, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 25, "position": "end", "correct": true, "ttft_s": 3.559, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 26, "position": "end", "correct": true, "ttft_s": 3.548, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 27, "position": "end", "correct": true, "ttft_s": 3.544, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 28, "position": "end", "correct": true, "ttft_s": 3.559, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 29, "position": "end", "correct": true, "ttft_s": 3.675, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 30, "position": "end", "correct": true, "ttft_s": 3.62, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 31, "position": "end", "correct": true, "ttft_s": 3.571, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 32, "position": "end", "correct": true, "ttft_s": 3.659, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 33, "position": "end", "correct": true, "ttft_s": 3.701, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 34, "position": "end", "correct": true, "ttft_s": 3.6, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 35, "position": "end", "correct": true, "ttft_s": 3.532, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 36, "position": "end", "correct": true, "ttft_s": 3.564, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 37, "position": "end", "correct": true, "ttft_s": 3.554, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 38, "position": "end", "correct": true, "ttft_s": 3.685, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 39, "position": "end", "correct": true, "ttft_s": 3.722, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 40, "position": "end", "correct": true, "ttft_s": 3.665, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 41, "position": "end", "correct": true, "ttft_s": 3.7, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 42, "position": "end", "correct": true, "ttft_s": 3.692, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 43, "position": "end", "correct": true, "ttft_s": 3.671, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 44, "position": "end", "correct": true, "ttft_s": 3.643, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 45, "position": "end", "correct": true, "ttft_s": 3.631, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 46, "position": "end", "correct": true, "ttft_s": 3.648, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 47, "position": "end", "correct": true, "ttft_s": 3.652, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 48, "position": "end", "correct": true, "ttft_s": 3.667, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 49, "position": "end", "correct": true, "ttft_s": 3.689, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 50, "position": "end", "correct": true, "ttft_s": 3.612, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 51, "position": "end", "correct": true, "ttft_s": 3.623, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 52, "position": "end", "correct": true, "ttft_s": 3.615, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 53, "position": "end", "correct": true, "ttft_s": 3.598, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 54, "position": "end", "correct": true, "ttft_s": 3.594, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 55, "position": "end", "correct": true, "ttft_s": 3.656, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 56, "position": "end", "correct": true, "ttft_s": 3.747, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 57, "position": "end", "correct": true, "ttft_s": 3.733, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 58, "position": "end", "correct": true, "ttft_s": 3.69, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 59, "position": "end", "correct": true, "ttft_s": 3.706, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 60, "position": "end", "correct": true, "ttft_s": 3.695, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 61, "position": "end", "correct": true, "ttft_s": 3.718, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 62, "position": "end", "correct": true, "ttft_s": 3.686, "cache": {}, "error": null}
+{"phase": "pressure_unique", "doc": 63, "position": "end", "correct": true, "ttft_s": 3.544, "cache": {}, "error": null}
+{"phase": "settle_after_pressure", "seconds": 60.0}
+{"phase": "target_replay", "doc": 0, "position": "end", "correct": true, "ttft_s": 1.239, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 1, "position": "end", "correct": true, "ttft_s": 2.248, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 2, "position": "end", "correct": true, "ttft_s": 1.043, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 3, "position": "end", "correct": true, "ttft_s": 2.71, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 4, "position": "end", "correct": true, "ttft_s": 1.239, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 5, "position": "end", "correct": true, "ttft_s": 3.855, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 6, "position": "end", "correct": true, "ttft_s": 4.056, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "target_replay", "doc": 7, "position": "end", "correct": true, "ttft_s": 2.491, "cache": {"device": 0, "host": 4096, "storage": 1600, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "position_start", "doc": 0, "position": "start", "correct": true, "ttft_s": 0.173, "cache": {"device": 5696, "host": 0, "storage": 0, "storage_backend": "HiCacheFile"}, "error": null}
+{"phase": "position_middle", "doc": 0, "position": "middle", "correct": true, "ttft_s": 0.242, "cache": {"device": 5696, "host": 0, "storage": 0, "storage_backend": "HiCacheFile"}, "error": null}
+{
+  "passed": false,
+  "gates": {
+    "all_requests_successful": true,
+    "all_answers_correct": true,
+    "cold_hot_replay_outputs_exact": true,
+    "uma_headroom_at_least_16_gib": true,
+    "swap_growth_at_most_1_gib": true,
+    "flush_cache_succeeded": null,
+    "storage_hit_required_and_observed": true,
+    "all_replays_meet_storage_coverage": false,
+    "all_replay_answers_exact": true,
+    "full_replay_cache_required_and_observed": true,
+    "host_hit_required_and_observed": null
+  },
+  "by_phase": {
+    "target_cold": {
+      "requests": 8,
+      "successful_requests": 8,
+      "failed_requests": 0,
+      "correct_answers": 8,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 3.7706909172497944,
+      "ttft_p50_s": 3.6258094739987428,
+      "ttft_p95_s": 4.780371501001355,
+      "tpot_mean_s": 0.05975503797691866,
+      "aggregate_output_tok_s": 3.427224999931051,
+      "cache_tier_tokens": {}
+    },
+    "target_hot": {
+      "requests": 1,
+      "successful_requests": 1,
+      "failed_requests": 0,
+      "correct_answers": 1,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 0.4377530599995225,
+      "ttft_p50_s": 0.4377530599995225,
+      "ttft_p95_s": 0.4377530599995225,
+      "tpot_mean_s": 0.07343881146152853,
+      "aggregate_output_tok_s": 10.054166036738645,
+      "cache_tier_tokens": {
+        "device": 5696,
+        "host": 0,
+        "storage": 0
+      }
+    },
+    "pressure_unique": {
+      "requests": 56,
+      "successful_requests": 56,
+      "failed_requests": 0,
+      "correct_answers": 56,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 3.704778157018024,
+      "ttft_p50_s": 3.651893440001004,
+      "ttft_p95_s": 3.721552357999826,
+      "tpot_mean_s": 0.0656657596515452,
+      "aggregate_output_tok_s": 3.37481152603884,
+      "cache_tier_tokens": {}
+    },
+    "target_replay": {
+      "requests": 8,
+      "successful_requests": 8,
+      "failed_requests": 0,
+      "correct_answers": 8,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 2.3603010117499252,
+      "ttft_p50_s": 2.4911807969983784,
+      "ttft_p95_s": 4.056386636000752,
+      "tpot_mean_s": 0.07345090998548477,
+      "aggregate_output_tok_s": 25.134930798439648,
+      "cache_tier_tokens": {
+        "device": 0,
+        "host": 32768,
+        "storage": 12800
+      }
+    },
+    "position_start": {
+      "requests": 1,
+      "successful_requests": 1,
+      "failed_requests": 0,
+      "correct_answers": 1,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 0.17321402999914426,
+      "ttft_p50_s": 0.17321402999914426,
+      "ttft_p95_s": 0.17321402999914426,
+      "tpot_mean_s": 0.08044287562506724,
+      "aggregate_output_tok_s": 11.641443220118953,
+      "cache_tier_tokens": {
+        "device": 5696,
+        "host": 0,
+        "storage": 0
+      }
+    },
+    "position_middle": {
+      "requests": 1,
+      "successful_requests": 1,
+      "failed_requests": 0,
+      "correct_answers": 1,
+      "incorrect_answers": 0,
+      "ttft_mean_s": 0.24156147800022154,
+      "ttft_p50_s": 0.24156147800022154,
+      "ttft_p95_s": 0.24156147800022154,
+      "tpot_mean_s": 0.0852965828666735,
+      "aggregate_output_tok_s": 10.51932444574716,
+      "cache_tier_tokens": {
+        "device": 5696,
+        "host": 0,
+        "storage": 0
+      }
+    }
+  },
+  "replay_serving": {
+    "client_concurrency": 8,
+    "wall_s": 5.092514518000826,
+    "wallclock_req_s": 1.570933174902478,
+    "wallclock_output_tok_s": 25.134930798439648,
+    "slo_threshold": {
+      "ttft_s": 5.0,
+      "tpot_s": 0.1
+    },
+    "slo_goodput_requests": 8,
+    "slo_goodput_req_s": 1.570933174902478,
+    "storage_backend": "HiCacheFile",
+    "min_storage_coverage": 0.95,
+    "storage_qualified_requests": 0,
+    "storage_qualified_slo_requests": 0,
+    "storage_qualified_slo_goodput_req_s": 0.0
+  }
+}

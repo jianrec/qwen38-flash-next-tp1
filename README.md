@@ -98,3 +98,6 @@ bash deploy/serve.sh
   url    = {https://github.com/jianrec/qwen38-flash-next-tp1}
 }
 ```
+## 双机 TP2 扩展
+
+双机 TP2 方案与单机 TP1 分开保存在 [`tp2/`](tp2/)。当前 TP2 最佳配置为 NVFP4 权重、FP8 E4M3 主 KV、Mamba BF16、Host4 GiB、MAXREQ=3、本地 HiCacheFile + NVMe、`direct + page_first_direct`。复现步骤见 [`tp2/REPRODUCE.md`](tp2/REPRODUCE.md)，结果见 [`tp2/RESULTS.md`](tp2/RESULTS.md)。

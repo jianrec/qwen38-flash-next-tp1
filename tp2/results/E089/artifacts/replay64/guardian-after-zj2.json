@@ -1,0 +1,87 @@
+{
+  "timestamp": 1794650393.6914785,
+  "memory": {
+    "total_bytes": 130661203968,
+    "available_bytes": 55039877120,
+    "free_bytes": 27080286208,
+    "buffers_bytes": 241446912,
+    "cached_bytes": 36910067712,
+    "swap_total_bytes": 17179865088,
+    "swap_used_bytes": 32768
+  },
+  "memory_pressure": {
+    "some_avg10": 0.0,
+    "full_avg10": 0.0
+  },
+  "swap": {
+    "pswpin": 0,
+    "pswpout": 32,
+    "page_size_bytes": 4096
+  },
+  "load1": 1.12,
+  "cpu_utilization_ratio": 0.029307731177362295,
+  "disk_total_bytes": 4031871553536,
+  "disk_available_bytes": 1319532941312,
+  "network": {
+    "enP7s7": {
+      "rx_bytes": 0,
+      "tx_bytes": 0
+    },
+    "enp1s0f0np0": {
+      "rx_bytes": 690620020628,
+      "tx_bytes": 690635751856
+    },
+    "enp1s0f1np1": {
+      "rx_bytes": 45529,
+      "tx_bytes": 57798
+    },
+    "enP2p1s0f0np0": {
+      "rx_bytes": 45492,
+      "tx_bytes": 7809
+    },
+    "enP2p1s0f1np1": {
+      "rx_bytes": 28283,
+      "tx_bytes": 7654
+    },
+    "wlP9s9": {
+      "rx_bytes": 6322239,
+      "tx_bytes": 5452081
+    },
+    "tailscale0": {
+      "rx_bytes": 148796,
+      "tx_bytes": 357822
+    }
+  },
+  "gpu": {
+    "utilization_ratio": 0.96,
+    "temperature_celsius": 57.0,
+    "power_watts": 29.08
+  },
+  "target": {
+    "name": "E089-tp2-r054-local-file-maxreq3-20261114-r0",
+    "id": "3c5ace8767b582a36c382ff67fb28ed26b07a7d1cdb76d613c33dca6f32e47d5",
+    "running": true,
+    "pid": 78706,
+    "memory_bytes": 42074296320,
+    "memory_peak_bytes": 69750763520,
+    "swap_bytes": 0,
+    "memory_limit_bytes": 107374182400,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    }
+  },
+  "armed": true,
+  "run_id": "E089-tp2-r054-local-file-maxreq3-20261114",
+  "config": "A",
+  "group": "G23",
+  "dry_run": false,
+  "last_trigger": null,
+  "guard_version": 2,
+  "agent_pid": 18033
+}
